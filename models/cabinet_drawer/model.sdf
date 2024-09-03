@@ -2,10 +2,21 @@
 <sdf version="1.7">
     <model name="cabinet_with_drawer">
     <pose>0 0 0 0 0 0</pose>
-    <static>true</static>
+
 
         <link name="cabinet">
             <pose>0 0 0 0 0 0</pose>
+            <inertial>
+              <inertia>
+                <ixx>2.501</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>2.501</iyy>
+                <iyz>0</iyz>
+                <izz>5</izz>
+              </inertia>
+              <mass>120.0</mass>
+          </inertial>
             <visual name="cabinet_visual">
                 <geometry>
                     <mesh>
@@ -24,9 +35,25 @@
             </collision>
         </link>
 
+        <joint name="world_fixed" type="fixed">
+        <parent>world</parent>
+        <child>cabinet</child>
+        </joint>
+
         <link name="drawer1">
             <pose>0.013 -0.23 0.9 0 0 0</pose>
-            <visual name="drawer_visual">
+            <inertial>
+              <inertia>
+                <ixx>0.201</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.201</iyy>
+                <iyz>0</iyz>
+                <izz>0.5</izz>
+              </inertia>
+              <mass>2.0</mass>
+          </inertial>
+            <visual name="drawer_visual1">
                 <geometry>
                     <mesh>
                      <uri>model://cabinet_drawer/meshes/drawer.dae</uri>
@@ -34,7 +61,7 @@
                     </mesh>
                 </geometry>
             </visual>
-            <collision name="drawer_collision">
+            <collision name="drawer_collision1">
                 <geometry>
                     <mesh>
                      <uri>model://cabinet_drawer/meshes/drawer.dae</uri>
@@ -47,25 +74,31 @@
 
 
         <joint name="drawer_joint1" type="prismatic">
-        <child>drawer</child>
+        <child>drawer1</child>
         <parent>cabinet</parent>
         <axis>
           <limit>
-            <lower>-1</lower>
-            <upper>1</upper>
+            <lower>-0.6</lower>
+            <upper>0</upper>
           </limit>
           <xyz>0 1 0</xyz>
         </axis>
-        <physics>
-          <ode>
-            <cfm_damping>1</cfm_damping>
-          </ode>
-        </physics>
        </joint>
 
         <link name="drawer2">
             <pose>0.013 -0.23 0.6 0 0 0</pose>
-            <visual name="drawer_visual">
+            <inertial>
+              <inertia>
+                <ixx>0.201</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.201</iyy>
+                <iyz>0</iyz>
+                <izz>0.5</izz>
+              </inertia>
+              <mass>2.0</mass>
+          </inertial>
+            <visual name="drawer_visual2">
                 <geometry>
                     <mesh>
                      <uri>model://cabinet_drawer/meshes/drawer.dae</uri>
@@ -73,7 +106,7 @@
                     </mesh>
                 </geometry>
             </visual>
-            <collision name="drawer_collision">
+            <collision name="drawer_collision2">
                 <geometry>
                     <mesh>
                      <uri>model://cabinet_drawer/meshes/drawer.dae</uri>
@@ -86,25 +119,31 @@
 
 
         <joint name="drawer_joint2" type="prismatic">
-        <child>drawer</child>
+        <child>drawer2</child>
         <parent>cabinet</parent>
         <axis>
           <limit>
-            <lower>-1</lower>
-            <upper>1</upper>
+            <lower>-0.6</lower>
+            <upper>0</upper>
           </limit>
           <xyz>0 1 0</xyz>
         </axis>
-        <physics>
-          <ode>
-            <cfm_damping>1</cfm_damping>
-          </ode>
-        </physics>
        </joint>
 
         <link name="drawer3">
             <pose>0.013 -0.23 0.3 0 0 0</pose>
-            <visual name="drawer_visual">
+            <inertial>
+              <inertia>
+                <ixx>0.201</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.201</iyy>
+                <iyz>0</iyz>
+                <izz>0.5</izz>
+              </inertia>
+              <mass>2.0</mass>
+          </inertial>
+            <visual name="drawer_visual3">
                 <geometry>
                     <mesh>
                      <uri>model://cabinet_drawer/meshes/drawer.dae</uri>
@@ -112,7 +151,7 @@
                     </mesh>
                 </geometry>
             </visual>
-            <collision name="drawer_collision">
+            <collision name="drawer_collision3">
                 <geometry>
                     <mesh>
                      <uri>model://cabinet_drawer/meshes/drawer.dae</uri>
@@ -125,20 +164,15 @@
 
 
         <joint name="drawer_joint3" type="prismatic">
-        <child>drawer</child>
+        <child>drawer3</child>
         <parent>cabinet</parent>
         <axis>
           <limit>
-            <lower>-1</lower>
-            <upper>1</upper>
+            <lower>-0.6</lower>
+            <upper>0</upper>
           </limit>
           <xyz>0 1 0</xyz>
         </axis>
-        <physics>
-          <ode>
-            <cfm_damping>1</cfm_damping>
-          </ode>
-        </physics>
        </joint>
 
     </model>

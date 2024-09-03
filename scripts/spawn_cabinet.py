@@ -55,7 +55,7 @@ sdff="""
 
 
         <joint name="drawer_joint1" type="prismatic">
-        <child>drawer</child>
+        <child>drawer1</child>
         <parent>cabinet</parent>
         <axis>
           <limit>
@@ -94,7 +94,7 @@ sdff="""
 
 
         <joint name="drawer_joint2" type="prismatic">
-        <child>drawer</child>
+        <child>drawer2</child>
         <parent>cabinet</parent>
         <axis>
           <limit>
@@ -133,7 +133,7 @@ sdff="""
 
 
         <joint name="drawer_joint3" type="prismatic">
-        <child>drawer</child>
+        <child>drawer3</child>
         <parent>cabinet</parent>
         <axis>
           <limit>
@@ -155,7 +155,6 @@ sdff="""
 
 
 rospy.init_node('insert_object',log_level=rospy.INFO)
-
 
 
 position = [0,0,0]

@@ -8,7 +8,7 @@
   <arg name="rviz"        default="false" doc="Should RVIz be launched?" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch" if="$(arg gazebo)">
-    <arg name="world_name" value="$(find tiago_sim)/worlds/user_study.world"/>
+    <arg name="world_name" value="$(find tiago_sim)/worlds/joint_demo.world"/>
     <arg name="gui" value="$(eval not arg('headless'))"/>
     <arg name="use_sim_time" value="true"/>
   </include>
