@@ -52,14 +52,14 @@ sdff="""
             <pose>0.013 -0.23 0.9 0 0 0</pose>
             <inertial>
               <inertia>
-                <ixx>0.201</ixx>
+                <ixx>0.17689519</ixx>
                 <ixy>0</ixy>
                 <ixz>0</ixz>
-                <iyy>0.201</iyy>
+                <iyy>0.22160905</iyy>
                 <iyz>0</iyz>
-                <izz>0.5</izz>
+                <izz>0.35997466</izz>
               </inertia>
-              <mass>2.0</mass>
+              <mass>3.0</mass>
           </inertial>
             <visual name="drawer_visual1">
                 <geometry>
@@ -97,14 +97,14 @@ sdff="""
             <pose>0.013 -0.23 0.6 0 0 0</pose>
             <inertial>
               <inertia>
-                <ixx>0.201</ixx>
+                <ixx>0.17689519</ixx>
                 <ixy>0</ixy>
                 <ixz>0</ixz>
-                <iyy>0.201</iyy>
+                <iyy>0.22160905</iyy>
                 <iyz>0</iyz>
-                <izz>0.5</izz>
+                <izz>0.35997466</izz>
               </inertia>
-              <mass>2.0</mass>
+              <mass>3.0</mass>
           </inertial>
             <visual name="drawer_visual2">
                 <geometry>
@@ -142,14 +142,14 @@ sdff="""
             <pose>0.013 -0.23 0.3 0 0 0</pose>
             <inertial>
               <inertia>
-                <ixx>0.201</ixx>
+                <ixx>0.17689519</ixx>
                 <ixy>0</ixy>
                 <ixz>0</ixz>
-                <iyy>0.201</iyy>
+                <iyy>0.22160905</iyy>
                 <iyz>0</iyz>
-                <izz>0.5</izz>
+                <izz>0.35997466</izz>
               </inertia>
-              <mass>2.0</mass>
+              <mass>3.0</mass>
           </inertial>
             <visual name="drawer_visual3">
                 <geometry>
