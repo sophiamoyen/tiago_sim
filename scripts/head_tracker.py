@@ -53,13 +53,31 @@ class TiagoTeleopHead(object):
         self.hmd_yaw = msg.data
 
     def send_hmd_goal(self, positions):
+        # # TODO >>>
+        # print(positions)
+        # des_joint_states = [np.array(positions)]
+        # times_from_start = rospy.Duration.from_sec(3)
+        # times_from_start = [times_from_start * (i+1) for i in range(len(des_joint_states))]
+        
+        # des_joint_vels = [np.zeros(2)] * len(des_joint_states)
+        # print(des_joint_states)
+        # print(des_joint_vels)
+            
+        # print(times_from_start)
+        # points = []
+        # for joint_state, joint_vel, t in zip(des_joint_states, des_joint_vels, times_from_start):
+        #     points.append(JointTrajectoryPoint(positions=joint_state, velocities=joint_vel, time_from_start=t))
+        # print(points)
+        # # # TODO <<<
+        
+        
         jt = JointTrajectory()
-        jt.header.stamp = rospy.Time.now()
+        # jt.header.stamp = rospy.Time.now()
         jt.joint_names = ["head_1_joint", "head_2_joint"]
         jtp = JointTrajectoryPoint()
         jtp.positions = list(positions)
         # jtp.velocities = [0.0] * len(positions)
-        jtp.time_from_start = rospy.Time(1)   #default 0.4
+        #jtp.time_from_start = rospy.Time(1)   #default 0.4
         jt.points.append(jtp)
         self.hmd_command.publish(jt)  
 
